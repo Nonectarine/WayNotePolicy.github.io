@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WayNote – Eliminazione Account</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 32px 24px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 6px; }
+    header p { color: #aaa; font-size: 0.95rem; }
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 24px auto 0;
+    }
+    .lang-btn {
+      padding: 8px 28px;
+      border-radius: 24px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: #fff; color: #1a1a2e; }
+    .container { max-width: 780px; margin: 40px auto; padding: 0 24px 60px; }
+    .content { display: none; }
+    .content.active { display: block; }
+    h2 {
+      font-size: 1.2rem;
+      color: #1a1a2e;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      border-left: 4px solid #e53935;
+      padding-left: 12px;
+    }
+    p { margin-bottom: 12px; color: #444; }
+    ul { margin: 8px 0 12px 24px; color: #444; }
+    li { margin-bottom: 6px; }
+    .steps { counter-reset: step-counter; list-style: none; margin: 16px 0; padding: 0; }
+    .steps li {
+      counter-increment: step-counter;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .steps li::before {
+      content: counter(step-counter);
+      background: #1a1a2e;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .warning-box {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #856404;
+      font-size: 0.95rem;
+    }
+    .warning-box strong { color: #6d4c00; }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+    .data-table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 700; }
+    .data-table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; color: #444; }
+    .data-table tr:nth-child(even) td { background: #f4f4f4; }
+    .contact-box {
+      background: #fff;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+    .contact-box a { color: #e53935; font-weight: 600; text-decoration: none; }
+    .contact-box a:hover { text-decoration: underline; }
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: #1a1a2e;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 24px; color: #999; font-size: 0.85rem; border-top: 1px solid #e0e0e0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>&#128465;&#65039; Eliminazione Account</h1>
+    <p>WayNote &#8211; Gestione dei dati utente</p>
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('it', this)">&#127470;&#127481; Italiano</button>
+      <button class="lang-btn" onclick="setLang('en', this)">&#127468;&#127463; English</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ITALIANO -->
+    <div class="content active" id="lang-it">
+
+      <h2>Come eliminare il tuo account</h2>
+      <p>Puoi eliminare il tuo account WayNote direttamente dall'app in qualsiasi momento. La procedura è rapida e immediata.</p>
+
+      <ol class="steps">
+        <li>Apri l'app WayNote e vai alla scheda <strong>Profilo</strong> (icona in basso a destra).</li>
+        <li>Tocca l'icona <strong>Impostazioni</strong> (&#9881;&#65039;) in alto a destra del profilo.</li>
+        <li>Nella sezione <strong>Account</strong>, tocca il pulsante <strong>"Elimina account"</strong> (icona cestino, sfondo rosso).</li>
+        <li>Si aprirà una finestra di conferma che elenca tutti i dati che verranno eliminati.</li>
+        <li>Tocca <strong>"Elimina"</strong> per confermare. L'operazione è irreversibile.</li>
+      </ol>
+
+      <div class="warning-box">
+        <strong>&#9888;&#65039; Attenzione:</strong> L'eliminazione dell'account è permanente e non può essere annullata. Tutti i tuoi dati verranno rimossi immediatamente dai nostri sistemi.
+      </div>
+
+      <h2>Cosa viene eliminato</h2>
+      <p>Quando elimini il tuo account, vengono rimossi definitivamente tutti i seguenti dati:</p>
+
+      <table class="data-table">
+        <tr><th>Categoria</th><th>Dati eliminati</th></tr>
+        <tr><td><strong>Profilo</strong></td><td>Username, email, foto profilo, foto di copertina, bio, statistiche</td></tr>
+        <tr><td><strong>Viaggi</strong></td><td>Tutti i viaggi creati, tappe, aeroporti, foto e video caricati</td></tr>
+        <tr><td><strong>Social</strong></td><td>Follower, seguiti, richieste di follow pendenti</td></tr>
+        <tr><td><strong>Interazioni</strong></td><td>Like ai viaggi, notifiche ricevute e inviate</td></tr>
+        <tr><td><strong>Badge</strong></td><td>Tutti i badge e progressi sbloccati</td></tr>
+      </table>
+
+      <h2>Alternativa: richiesta via email</h2>
+      <p>Se non riesci ad accedere all'app o preferisci richiedere l'eliminazione tramite email, contattaci all'indirizzo indicato qui sotto. Elaboriamo le richieste entro <strong>30 giorni</strong>.</p>
+
+      <div class="contact-box">
+        <p>&#128231; Per richiedere l'eliminazione dell'account via email:<br/>
+        <a href="mailto:support@waynoteapp.com">support@waynoteapp.com</a></p>
+        <p style="margin-top:10px;margin-bottom:0;font-size:0.9rem;color:#666;">Oggetto consigliato: <em>"Richiesta eliminazione account WayNote &#8211; [tuo username]"</em></p>
+      </div>
+
+      <a href="index.html" class="back-link">&#8592; Torna alla Privacy Policy</a>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="content" id="lang-en">
+
+      <h2>How to delete your account</h2>
+      <p>You can delete your WayNote account directly from the app at any time. The process is quick and immediate.</p>
+
+      <ol class="steps">
+        <li>Open the WayNote app and go to the <strong>Profile</strong> tab (icon at the bottom right).</li>
+        <li>Tap the <strong>Settings</strong> icon (&#9881;&#65039;) at the top right of your profile.</li>
+        <li>In the <strong>Account</strong> section, tap the <strong>"Delete account"</strong> button (trash icon, red background).</li>
+        <li>A confirmation window will appear listing all data that will be deleted.</li>
+        <li>Tap <strong>"Delete"</strong> to confirm. This action is irreversible.</li>
+      </ol>
+
+      <div class="warning-box">
+        <strong>&#9888;&#65039; Warning:</strong> Account deletion is permanent and cannot be undone. All your data will be immediately removed from our systems.
+      </div>
+
+      <h2>What gets deleted</h2>
+      <p>When you delete your account, the following data is permanently removed:</p>
+
+      <table class="data-table">
+        <tr><th>Category</th><th>Deleted data</th></tr>
+        <tr><td><strong>Profile</strong></td><td>Username, email, profile photo, cover photo, bio, statistics</td></tr>
+        <tr><td><strong>Trips</strong></td><td>All created trips, stops, airports, uploaded photos and videos</td></tr>
+        <tr><td><strong>Social</strong></td><td>Followers, following, pending follow requests</td></tr>
+        <tr><td><strong>Interactions</strong></td><td>Trip likes, received and sent notifications</td></tr>
+        <tr><td><strong>Badges</strong></td><td>All unlocked badges and progress</td></tr>
+      </table>
+
+      <h2>Alternative: request via email</h2>
+      <p>If you cannot access the app or prefer to request deletion by email, contact us at the address below. We process requests within <strong>30 days</strong>.</p>
+
+      <div class="contact-box">
+        <p>&#128231; To request account deletion by email:<br/>
+        <a href="mailto:support@waynoteapp.com">support@waynoteapp.com</a></p>
+        <p style="margin-top:10px;margin-bottom:0;font-size:0.9rem;color:#666;">Suggested subject: <em>"WayNote account deletion request &#8211; [your username]"</em></p>
+      </div>
+
+      <a href="index.html" class="back-link">&#8592; Back to Privacy Policy</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 WayNote. All rights reserved.
+  </footer>
+
+  <script>
+    function setLang(lang, btn) {
+      document.querySelectorAll('.content').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.lang-btn').forEach(function(el) { el.classList.remove('active'); });
+      document.getElementById('lang-' + lang).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
